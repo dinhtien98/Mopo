@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "863743246139",
+    "firebase_url": "https://mopo-af4e3-default-rtdb.firebaseio.com",
+    "project_id": "mopo-af4e3",
+    "storage_bucket": "mopo-af4e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863743246139:android:19a1cd854ce5c9e14ac11e",
+        "android_client_info": {
+          "package_name": "com.example.mopo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863743246139-18fuet36p3fqnea6m24apdfdhmjdr5a3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL0iqw8pOjJweI5jAOTODXqY71kg91EXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863743246139-18fuet36p3fqnea6m24apdfdhmjdr5a3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

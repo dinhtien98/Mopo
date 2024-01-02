@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile"
+    android:background="@xml/vien1">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/Avatar"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:src="@drawable/mopo"
+            android:layout_gravity="center"
+            android:background="@xml/vien"/>
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <EditText
+                android:id="@+id/Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ngô Đình Tiên"
+                android:hint="Nhập vào tên"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+            <EditText
+                android:id="@+id/NgaySinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="02/02/1998"
+                android:hint="Nhập vào ngày tháng năm sinh"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:inputType="date"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+            <EditText
+                android:id="@+id/GioiTinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nam"
+                android:hint="Nhập vào giới tính"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+            <EditText
+                android:id="@+id/SDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0377547885"
+                android:hint="Nhập vào số điện thoại"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+            <EditText
+                android:id="@+id/DiaChi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="192/5-Phú thọ hòa-Tân phú - tp.HCM"
+                android:hint="Nhập vào địa chỉ"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linear1">
+        <Button
+            android:id="@+id/btSua"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Sửa thông tin"></Button>
+        <Button
+            android:id="@+id/btLuu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Lưu thông tin"
+            android:layout_marginLeft="30dp"></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linear3">
+        <LinearLayout
+            android:id="@+id/linear5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tài khoản:"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/tvTK"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ngodinhtien98@gmail.com"
+                android:inputType="none"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btDoiemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xác thực Email"/>
+            <Button
+                android:id="@+id/btDoiMK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đổi mật khẩu"/>
+            <Button
+                android:id="@+id/btbackhome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quay lại trang chủ"/>
+            <Button
+                android:id="@+id/btdangxuat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng xuất"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/linear4"
+            android:visibility="gone">
+            <LinearLayout
+                android:id="@+id/linear9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mật khẩu mới:"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/tvMK"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="nhập mật khẩu mới"
+                    android:textSize="20dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btXacNhan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xác nhận"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

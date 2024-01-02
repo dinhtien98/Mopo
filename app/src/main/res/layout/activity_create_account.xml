@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccount"
+    android:background="@drawable/backgrouplogin"
+    android:scaleType="fitCenter">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="100dp">
+        <TableRow
+            android:gravity="left"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/mopo"
+                android:layout_marginLeft="0dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="start|center_vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="MOPO"
+                android:textSize="60dp"
+                android:textStyle="bold"></TextView>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/imTB"
+                android:src="@drawable/thongbao0"
+                android:scaleType="fitCenter"
+                android:contentDescription="Xem hình ảnh"
+                />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TableRow
+            android:background="@xml/vien">
+
+            <EditText
+                android:id="@+id/tk"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:hint="Tài Khoảng" />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/key"
+                android:layout_marginLeft="0dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="start|center_vertical" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@xml/vien"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/mk"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:hint="Mật Khẩu"
+                android:inputType="textWebPassword" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/btSee"
+                android:src="@drawable/hinh0"
+                android:scaleType="fitCenter"
+                android:contentDescription="Xem hình ảnh"
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@xml/vien"
+            android:layout_marginTop="5dp">
+            <Button
+                android:text="Tạo Tài khoản"
+                android:id="@+id/btCreateAccount"
+                android:layout_marginLeft="5dp"></Button>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageVanTay"
+                android:src="@drawable/vantay"
+                android:layout_marginLeft="0dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="start|center_vertical" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

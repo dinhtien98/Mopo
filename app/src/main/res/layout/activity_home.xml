@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".home">
+
+    <!-- Ô tìm kiếm -->
+    <LinearLayout
+        android:id="@+id/linearLayoutSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rounded_corner"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Icon tìm kiếm -->
+        <ImageView
+            android:id="@+id/imageViewSearch"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/timkiem" />
+
+        <!-- Ô nhập tìm kiếm -->
+        <EditText
+            android:id="@+id/tk"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Tìm kiếm" />
+    </LinearLayout>
+
+    <!-- Guideline để giữa trên màn hình -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <!-- Hình ảnh hiển thị -->
+    <ImageView
+        android:id="@+id/imageViewDisplay"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/backgrouphome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSearch"
+        app:layout_constraintWidth_percent="1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMonny"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewDisplay">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số tiền: "
+            android:textSize="20dp"/>
+        <TextView
+            android:id="@+id/tvMonny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đồng"
+            android:textSize="16dp"/>
+    </LinearLayout>
+    <!-- Các nút chức năng -->
+    <LinearLayout
+        android:id="@+id/linearLayoutFunctions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutMonny">
+
+        <!-- Các ImageView cho các nút chức năng -->
+        <ImageView
+            android:id="@+id/imageNapRut"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nap" />
+
+        <ImageView
+            android:id="@+id/imageNhantien"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nhantien" />
+
+        <ImageView
+            android:id="@+id/imageQRthanhtoan"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/qrthanhtoan" />
+
+        <ImageView
+            android:id="@+id/imageQuetma"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/quetma" />
+    </LinearLayout>
+
+    <!-- Các tiêu đề của các chức năng -->
+    <LinearLayout
+        android:id="@+id/linearLayoutFunctionTitles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFunctions">
+
+        <!-- Các TextView cho các tiêu đề -->
+        <TextView
+            android:id="@+id/textViewFunctionTitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nạp/Rút"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewFunctionTitle2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nhận tiền"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewFunctionTitle3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="QR Thanh Toán"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewFunctionTitle4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Quét mã"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Các nút chức năng -->
+    <LinearLayout
+        android:id="@+id/linearLayoutFunctions1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFunctionTitles">
+
+        <!-- Các ImageView cho các nút chức năng -->
+        <ImageView
+            android:id="@+id/imageChuyentien"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chuyentien" />
+
+        <ImageView
+            android:id="@+id/imageChuyenTienVeNganHang"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chuyentiennganhang" />
+
+        <ImageView
+            android:id="@+id/imageThanhToanHoaDon"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/thanhtoanhoadon" />
+
+        <ImageView
+            android:id="@+id/imageNapTienDienThoai"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/naptiendienthoai" />
+    </LinearLayout>
+
+    <!-- Các tiêu đề của các chức năng -->
+    <LinearLayout
+        android:id="@+id/linearLayoutFunctionTitles1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFunctions1">
+
+        <!-- Các TextView cho các tiêu đề -->
+        <TextView
+            android:id="@+id/textViewFunctionTitle1.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Chuyển tiền"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewFunctionTitle2.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Chuyển tiền ngân hàng"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewFunctionTitle3.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Thanh toán hóa đơn"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewFunctionTitle4.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="nạp tiền điện thoại"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutNavbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayoutNavbar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFunctionTitles1"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imgbtnQR"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/qr"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/imageLichsuGD"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lichsugd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutNavbar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutFunctionTitles1"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <!-- Thêm TextView trong LinearLayout này -->
+        <TextView
+            android:id="@+id/linearLayoutNavbar1.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Hồ sơ của tôi"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/linearLayoutNavbar1.2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Quét mã QR"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/linearLayoutNavbar1.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Lịch sử giao dich"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

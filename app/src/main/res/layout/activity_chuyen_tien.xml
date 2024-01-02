@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChuyenTien">
+    <LinearLayout
+        android:id="@+id/linearLayoutSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/etTKnhantien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên tài khoản nhận tiền"/>
+        <EditText
+            android:id="@+id/etSoTien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập số tiền"
+            android:inputType="number"/>
+        <Button
+            android:id="@+id/btXacNhanChuyenTien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xác nhận chuyển tiền"/>
+        <Button
+            android:id="@+id/btBackHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quay về trang chủ"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
